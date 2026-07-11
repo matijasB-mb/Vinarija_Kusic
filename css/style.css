@@ -243,10 +243,42 @@ a{color:inherit}
   box-shadow:0 0 0 2px rgba(255,255,255,.75),0 10px 22px rgba(0,0,0,.45)}
 
 /* ===== KONTAKT ===== */
-.kontakt{background:var(--maroon-deep);color:var(--cream);padding:0 0 3rem}
-.kontakt .cta-inner{padding:5.5rem 1.25rem 4rem}
-.kontakt .container{background:var(--cream);color:var(--ink);padding-top:4rem;padding-bottom:3rem;border-radius:0}
-.kontakt-cols a{color:var(--ink)}
+/* ===== KONTAKT ===== */
+.kontakt{background:var(--maroon-deep);color:var(--cream);padding:0 0 5rem}
+
+.kontakt-hero{text-align:center;padding:6rem 1.25rem 5rem;display:flex;flex-direction:column;align-items:center;gap:1.6rem;
+  position:relative}
+.kontakt-hero::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 70% at 50% 50%,rgba(201,162,39,.06) 0%,transparent 70%);
+  pointer-events:none}
+.kontakt-gold-line{display:block;width:60px;height:1px;background:var(--gold);opacity:.7;margin-top:.4rem}
+
+.kontakt .container{padding-top:0;padding-bottom:0}
+
+.kontakt-info{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:start;
+  gap:0;max-width:760px;margin:0 auto 4rem;text-align:center}
+.kontakt-info-col{display:flex;flex-direction:column;gap:.55rem;padding:0 1.5rem}
+.kontakt-info-label{font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--gold);opacity:.85;margin-bottom:.2rem}
+.kontakt-info-col a{font-size:.92rem;color:var(--cream);text-decoration:none;opacity:.8;
+  line-height:1.6;transition:opacity .2s}
+.kontakt-info-col a:hover{opacity:1}
+.kontakt-info-divider{width:1px;height:80px;background:rgba(255,248,237,.15);align-self:center}
+
+.kontakt-boce{max-width:820px;margin:0 auto}
+.kontakt-boce img{cursor:zoom-in;border-radius:3px;width:100%;
+  filter:brightness(.85) contrast(1.05)}
+
+.zivjeli{font-family:var(--serif);font-size:clamp(1.8rem,3.4vw,2.5rem);text-align:center;
+  margin:3.5rem 0 0;color:var(--cream)}
+
+@media(max-width:760px){
+  .kontakt{padding:0 0 4rem}
+  .kontakt-hero{padding:4.5rem 1.25rem 4rem}
+  .kontakt-info{grid-template-columns:1fr;gap:2rem;margin-bottom:3rem}
+  .kontakt-info-divider{display:none}
+  .kontakt-info-col{padding:0}
+}
 .kontakt-cols p{font-size:.95rem;margin-bottom:.4rem}
 .kontakt-cols a{color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(36,16,9,.3);transition:border-color .25s}
 .kontakt-cols a:hover{border-color:var(--ink)}
