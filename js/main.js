@@ -228,6 +228,38 @@
     });
   }
 
+  /* --- CTA typewriter --- */
+  const tw = document.getElementById('cta-typewriter');
+  if (tw) {
+    const phrase = 'Svaka čaša priča priču.';
+    const cursor = document.createElement('span');
+    cursor.className = 'cta-cursor';
+    cursor.setAttribute('aria-hidden', 'true');
+    let started = false;
+
+    function typePhrase() {
+      let i = 0;
+      tw.textContent = '';
+      tw.appendChild(cursor);
+      const interval = reduced ? 0 : 65;
+      if (reduced) { tw.insertBefore(document.createTextNode(phrase), cursor); return; }
+      const t = setInterval(() => {
+        tw.insertBefore(document.createTextNode(phrase[i]), cursor);
+        i++;
+        if (i >= phrase.length) clearInterval(t);
+      }, interval);
+    }
+
+    const ctaObs = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && !started) {
+        started = true;
+        setTimeout(typePhrase, 300);
+        ctaObs.disconnect();
+      }
+    }, { threshold: 0.4 });
+    ctaObs.observe(tw);
+  }
+
   /* --- godina u podnožju --- */
   document.getElementById('god').textContent = new Date().getFullYear();
 })();
