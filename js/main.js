@@ -3,6 +3,45 @@
   'use strict';
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* --- ultra glatko skrolanje (wheel inercija, samo desktop) --- */
+  const finePointer = window.matchMedia('(pointer: fine)').matches;
+  if (finePointer && !reduced) {
+    let target = window.scrollY;
+    let current = window.scrollY;
+    let animating = false;
+    const ease = 0.085;
+    const maxScroll = () => document.documentElement.scrollHeight - window.innerHeight;
+    const clamp = v => Math.max(0, Math.min(v, maxScroll()));
+
+    function loop() {
+      current += (target - current) * ease;
+      if (Math.abs(target - current) < 0.5) {
+        current = target;
+        window.scrollTo(0, current);
+        animating = false;
+        return;
+      }
+      window.scrollTo(0, current);
+      requestAnimationFrame(loop);
+    }
+
+    window.addEventListener('wheel', e => {
+      /* ne preuzimaj kad je lightbox/modal/izbornik otvoren ili kod ctrl-zooma */
+      if (document.body.style.overflow === 'hidden' || e.ctrlKey) return;
+      let dy = e.deltaY;
+      if (e.deltaMode === 1) dy *= 16;          /* redci → px */
+      else if (e.deltaMode === 2) dy *= window.innerHeight; /* stranice → px */
+      e.preventDefault();
+      target = clamp((animating ? target : window.scrollY) + dy);
+      if (!animating) { current = window.scrollY; animating = true; requestAnimationFrame(loop); }
+    }, { passive: false });
+
+    /* sinkronizacija kad se skrola drugačije (tipke, anchor, razvlačenje trake) */
+    window.addEventListener('scroll', () => {
+      if (!animating) { target = current = window.scrollY; }
+    }, { passive: true });
+  }
+
   /* --- reveal on scroll --- */
   const revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && !reduced) {
