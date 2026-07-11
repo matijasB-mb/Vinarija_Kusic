@@ -229,42 +229,143 @@
 <!-- ===== PRIZNANJA ===== -->
 <section class="priznanja" id="priznanja">
   <div class="container">
-    <h2 class="sec-title light center reveal">Priznanja | Tradicija kvalitete</h2>
+    <h2 class="sec-title light center reveal">Priznanja <span class="priznanja-sep">|</span> Tradicija kvalitete</h2>
     <p class="priznanja-text reveal">Naša vina rezultat su dugogodišnjeg rada, pažnje i ljubavi prema vinogradima. Kroz
     godine su prepoznata i nagrađivana, a svako priznanje za nas je potvrda kvalitete koju
     njegujemo u svakoj boci.</p>
   </div>
-  <div class="bento reveal" id="dip-bento">
-    <button type="button" class="bento-item bb-feat" data-title="Zlatna diploma" data-desc="Graševina — 58. izložba vina kontinentalne Hrvatske">
-      <img src="assets/img/dip-zlatna.jpg" alt="Zlatna diploma za Graševinu" loading="lazy"></button>
-    <button type="button" class="bento-item bb-3" data-title="Srebrna diploma" data-desc="Izložba vina kontinentalne Hrvatske">
-      <img src="assets/img/dip-srebrna.jpg" alt="Srebrna diploma" loading="lazy"></button>
-    <button type="button" class="bento-item bb-4" data-title="Brončana diploma" data-desc="Izložba vina kontinentalne Hrvatske">
-      <img src="assets/img/dip-broncana.jpg" alt="Brončana diploma" loading="lazy"></button>
-    <button type="button" class="bento-item bb-4" data-title="Zahvalnica" data-desc="Vina Kušić">
-      <img src="assets/img/dip-zahvalnica.jpg" alt="Zahvalnica Vina Kušić" loading="lazy"></button>
-    <button type="button" class="bento-item bb-4" data-title="Diploma" data-desc="Vivodina 2008.">
-      <img src="assets/img/dip-vivodina.jpg" alt="Diploma Vivodina 2008" loading="lazy"></button>
-    <button type="button" class="bento-item bb-3" data-title="Zlatna diploma" data-desc="Graševina — Sveti Ivan Zelina">
-      <img src="assets/img/dip-zlatna-zelina.jpg" alt="Zlatna diploma za Graševinu, Sveti Ivan Zelina" loading="lazy"></button>
-    <button type="button" class="bento-item bb-4" data-title="Zlatna diploma" data-desc="Cabernet Sauvignon">
-      <img src="assets/img/dip-zlatna-cabernet.jpg" alt="Zlatna diploma za Cabernet Sauvignon" loading="lazy"></button>
-    <button type="button" class="bento-item bb-4" data-title="Zlatna diploma" data-desc="Mješavina bijelih sorata">
-      <img src="assets/img/dip-zlatna-mjesavina.jpg" alt="Zlatna diploma za mješavinu bijelih sorata" loading="lazy"></button>
-    <button type="button" class="bento-item bb-4" data-title="Srebrna diploma" data-desc="Graševina — 57. izložba vina">
-      <img src="assets/img/dip-srebrna-57.jpg" alt="Srebrna diploma za Graševinu, 57. izložba" loading="lazy"></button>
-    <button type="button" class="bento-item bb-wide" data-title="Zlatno odličje" data-desc="Kušić Ivica">
-      <img src="assets/img/dip-zlatno-odlicje.jpg" alt="Zlatno odličje Kušić Ivica" loading="lazy"></button>
-  </div>
 
-  <!-- modal priznanja (bento) -->
-  <div class="bmodal" id="dip-modal" hidden aria-modal="true" role="dialog">
-    <button type="button" class="bm-close" aria-label="Zatvori">&times;</button>
-    <figure class="bm-stage">
-      <img id="bm-img" src="" alt="">
-      <figcaption class="bm-cap"><strong id="bm-title"></strong><span id="bm-desc"></span></figcaption>
-    </figure>
-    <div class="bm-dock" id="bm-dock"></div>
+  <div class="awards">
+    <div class="awards-line" aria-hidden="true"></div>
+
+    <article class="award reveal">
+      <figure class="award-media">
+        <span class="award-medal">Zlato</span>
+        <img class="award-img" src="assets/img/dip-zlatna.jpg" alt="Zlatna diploma za Graševinu" data-lightbox="Zlatna diploma — Graševina, 58. izložba vina kontinentalne Hrvatske" loading="lazy">
+      </figure>
+      <div class="award-body">
+        <span class="award-index">01</span>
+        <span class="award-label">Zlatna diploma</span>
+        <h3 class="award-title">Graševina</h3>
+        <p class="award-desc">58. izložba vina kontinentalne Hrvatske</p>
+      </div>
+    </article>
+
+    <article class="award reveal">
+      <figure class="award-media">
+        <span class="award-medal">Srebro</span>
+        <img class="award-img" src="assets/img/dip-srebrna.jpg" alt="Srebrna diploma" data-lightbox="Srebrna diploma — Izložba vina kontinentalne Hrvatske" loading="lazy">
+      </figure>
+      <div class="award-body">
+        <span class="award-index">02</span>
+        <span class="award-label">Srebrna diploma</span>
+        <h3 class="award-title">Izložba vina</h3>
+        <p class="award-desc">Kontinentalne Hrvatske</p>
+      </div>
+    </article>
+
+    <article class="award reveal">
+      <figure class="award-media">
+        <span class="award-medal">Bronca</span>
+        <img class="award-img" src="assets/img/dip-broncana.jpg" alt="Brončana diploma" data-lightbox="Brončana diploma — Izložba vina kontinentalne Hrvatske" loading="lazy">
+      </figure>
+      <div class="award-body">
+        <span class="award-index">03</span>
+        <span class="award-label">Brončana diploma</span>
+        <h3 class="award-title">Izložba vina</h3>
+        <p class="award-desc">Kontinentalne Hrvatske</p>
+      </div>
+    </article>
+
+    <article class="award reveal">
+      <figure class="award-media">
+        <span class="award-medal">Zlato</span>
+        <img class="award-img" src="assets/img/dip-zlatna-zelina.jpg" alt="Zlatna diploma za Graševinu, Sveti Ivan Zelina" data-lightbox="Zlatna diploma — Graševina, Sveti Ivan Zelina" loading="lazy">
+      </figure>
+      <div class="award-body">
+        <span class="award-index">04</span>
+        <span class="award-label">Zlatna diploma</span>
+        <h3 class="award-title">Graševina</h3>
+        <p class="award-desc">Sveti Ivan Zelina</p>
+      </div>
+    </article>
+
+    <article class="award reveal">
+      <figure class="award-media">
+        <span class="award-medal">Zlato</span>
+        <img class="award-img" src="assets/img/dip-zlatna-cabernet.jpg" alt="Zlatna diploma za Cabernet Sauvignon" data-lightbox="Zlatna diploma — Cabernet Sauvignon" loading="lazy">
+      </figure>
+      <div class="award-body">
+        <span class="award-index">05</span>
+        <span class="award-label">Zlatna diploma</span>
+        <h3 class="award-title">Cabernet Sauvignon</h3>
+        <p class="award-desc">Priznanje za crno vino</p>
+      </div>
+    </article>
+
+    <article class="award reveal">
+      <figure class="award-media">
+        <span class="award-medal">Zlato</span>
+        <img class="award-img" src="assets/img/dip-zlatna-mjesavina.jpg" alt="Zlatna diploma za mješavinu bijelih sorata" data-lightbox="Zlatna diploma — Mješavina bijelih sorata" loading="lazy">
+      </figure>
+      <div class="award-body">
+        <span class="award-index">06</span>
+        <span class="award-label">Zlatna diploma</span>
+        <h3 class="award-title">Mješavina bijelih sorata</h3>
+        <p class="award-desc">Priznanje za kupažu</p>
+      </div>
+    </article>
+
+    <article class="award reveal">
+      <figure class="award-media">
+        <span class="award-medal">Srebro</span>
+        <img class="award-img" src="assets/img/dip-srebrna-57.jpg" alt="Srebrna diploma za Graševinu, 57. izložba" data-lightbox="Srebrna diploma — Graševina, 57. izložba vina" loading="lazy">
+      </figure>
+      <div class="award-body">
+        <span class="award-index">07</span>
+        <span class="award-label">Srebrna diploma</span>
+        <h3 class="award-title">Graševina</h3>
+        <p class="award-desc">57. izložba vina</p>
+      </div>
+    </article>
+
+    <article class="award reveal">
+      <figure class="award-media">
+        <span class="award-medal">Zlato</span>
+        <img class="award-img" src="assets/img/dip-zlatno-odlicje.jpg" alt="Zlatno odličje Kušić Ivica" data-lightbox="Zlatno odličje — Kušić Ivica" loading="lazy">
+      </figure>
+      <div class="award-body">
+        <span class="award-index">08</span>
+        <span class="award-label">Zlatno odličje</span>
+        <h3 class="award-title">Ivica Kušić</h3>
+        <p class="award-desc">Priznanje vinaru</p>
+      </div>
+    </article>
+
+    <article class="award reveal">
+      <figure class="award-media">
+        <img class="award-img" src="assets/img/dip-zahvalnica.jpg" alt="Zahvalnica Vina Kušić" data-lightbox="Zahvalnica — Vina Kušić" loading="lazy">
+      </figure>
+      <div class="award-body">
+        <span class="award-index">09</span>
+        <span class="award-label">Zahvalnica</span>
+        <h3 class="award-title">Vina Kušić</h3>
+        <p class="award-desc">Priznanje za doprinos</p>
+      </div>
+    </article>
+
+    <article class="award reveal">
+      <figure class="award-media">
+        <img class="award-img" src="assets/img/dip-vivodina.jpg" alt="Diploma Vivodina 2008" data-lightbox="Diploma — Vivodina 2008." loading="lazy">
+      </figure>
+      <div class="award-body">
+        <span class="award-index">10</span>
+        <span class="award-label">Diploma</span>
+        <h3 class="award-title">Vivodina</h3>
+        <p class="award-desc">2008. godina</p>
+      </div>
+    </article>
+
   </div>
 </section>
 

@@ -119,6 +119,32 @@
     updatePs();
   }
 
+  /* --- priznanja: parallax na slikama diploma --- */
+  const awardMedia = Array.from(document.querySelectorAll('.award-media'));
+  if (awardMedia.length && !reduced) {
+    let awTick = false;
+    function updateAwards() {
+      const vh = window.innerHeight;
+      awardMedia.forEach(m => {
+        const r = m.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > vh) return;
+        /* -1 (element pri dnu) → 1 (element pri vrhu); 0 kad je u sredini */
+        const center = r.top + r.height / 2;
+        const p = (center - vh / 2) / (vh / 2);
+        const shift = Math.max(-1, Math.min(1, p)) * 22;
+        m.style.transform = 'translateY(' + shift.toFixed(1) + 'px)';
+      });
+      awTick = false;
+    }
+    window.addEventListener('scroll', () => {
+      if (!awTick) { requestAnimationFrame(updateAwards); awTick = true; }
+    }, { passive: true });
+    window.addEventListener('resize', () => {
+      if (!awTick) { requestAnimationFrame(updateAwards); awTick = true; }
+    }, { passive: true });
+    updateAwards();
+  }
+
   /* --- lightbox --- */
   const lb = document.getElementById('lightbox');
   const lbImg = document.getElementById('lb-img');
