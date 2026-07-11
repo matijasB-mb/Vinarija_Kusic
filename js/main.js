@@ -9,19 +9,21 @@
     let target = window.scrollY;
     let current = window.scrollY;
     let animating = false;
-    const ease = 0.085;
+    const ease = 0.12;
     const maxScroll = () => document.documentElement.scrollHeight - window.innerHeight;
     const clamp = v => Math.max(0, Math.min(v, maxScroll()));
+    /* instant scroll — zaobilazi CSS scroll-behavior:smooth da se ne bore dvije animacije */
+    const jump = y => window.scrollTo({ top: y, behavior: 'instant' });
 
     function loop() {
       current += (target - current) * ease;
       if (Math.abs(target - current) < 0.5) {
         current = target;
-        window.scrollTo(0, current);
+        jump(current);
         animating = false;
         return;
       }
-      window.scrollTo(0, current);
+      jump(current);
       requestAnimationFrame(loop);
     }
 
