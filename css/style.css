@@ -37,7 +37,7 @@ a{color:inherit}
 /* ===== HERO ===== */
 .hero{position:relative;min-height:100vh;min-height:100svh}
 .hero-bg{position:absolute;inset:0;background:url('../assets/img/hero-podrum.jpg') center 30%/cover no-repeat}
-.hero-watermark{position:absolute;left:0;right:0;bottom:6%;margin:0 auto;display:block;width:190px;opacity:.45;filter:brightness(.75) contrast(1.1)}
+.hero-watermark{position:absolute;left:50%;bottom:6%;transform:translateX(-50%);width:190px;opacity:.45;filter:brightness(.75) contrast(1.1);pointer-events:none}
 .topbar{position:relative;z-index:5;padding:1.6rem 1.25rem 0;max-width:1200px;margin:0 auto}
 .brand{display:flex;align-items:center;justify-content:center;gap:1.4rem}
 .brand-word{font-family:var(--serif);font-size:clamp(1.5rem,3.2vw,2.2rem);letter-spacing:.24em;text-transform:uppercase;font-weight:500}
