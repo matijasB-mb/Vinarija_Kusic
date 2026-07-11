@@ -243,9 +243,10 @@ a{color:inherit}
   box-shadow:0 0 0 2px rgba(255,255,255,.75),0 10px 22px rgba(0,0,0,.45)}
 
 /* ===== KONTAKT ===== */
-.kontakt{background:var(--cream);color:var(--ink);padding:5.5rem 0 3rem}
-.kontakt .sec-title{margin-bottom:2.2rem}
-.kontakt-script{font-size:1.05rem;max-width:900px;margin:0 auto 1.4rem}
+.kontakt{background:var(--maroon-deep);color:var(--cream);padding:0 0 3rem}
+.kontakt .cta-inner{padding:5.5rem 1.25rem 4rem}
+.kontakt .container{background:var(--cream);color:var(--ink);padding-top:4rem;padding-bottom:3rem;border-radius:0}
+.kontakt-cols a{color:var(--ink)}
 .kontakt-cols p{font-size:.95rem;margin-bottom:.4rem}
 .kontakt-cols a{color:var(--ink);text-decoration:none;border-bottom:1px solid rgba(36,16,9,.3);transition:border-color .25s}
 .kontakt-cols a:hover{border-color:var(--ink)}
