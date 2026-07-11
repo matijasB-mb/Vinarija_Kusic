@@ -37,7 +37,7 @@ a{color:inherit}
 /* ===== HERO ===== */
 .hero{position:relative;min-height:100vh;min-height:100svh}
 .hero-bg{position:absolute;inset:0;background:url('../assets/img/hero-podrum.jpg') center 30%/cover no-repeat}
-.hero-watermark{position:absolute;left:calc(50% - 95px);bottom:6%;width:190px;opacity:.35;pointer-events:none}
+.hero-watermark{position:absolute;left:calc(50% - 95px);bottom:6%;width:190px;opacity:.45;filter:brightness(.75) contrast(1.1);pointer-events:none}
 .topbar{position:relative;z-index:5;padding:1.6rem 1.25rem 0;max-width:1200px;margin:0 auto}
 .brand{display:flex;align-items:center;justify-content:center;gap:1.4rem}
 .brand-word{font-family:var(--serif);font-size:clamp(1.5rem,3.2vw,2.2rem);letter-spacing:.24em;text-transform:uppercase;font-weight:500}
@@ -258,7 +258,7 @@ a{color:inherit}
 .footer-inner{max-width:1100px;margin:0 auto}
 
 .footer-brand{display:flex;flex-direction:column;align-items:center;gap:.5rem;margin-bottom:2.4rem}
-.footer-crest{width:48px;opacity:.85}
+.footer-crest{width:48px;opacity:.55;filter:grayscale(1)}
 .footer-name{font-family:var(--serif);font-size:1.35rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase}
 .footer-est{font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;opacity:.5}
 
