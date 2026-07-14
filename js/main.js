@@ -328,5 +328,6 @@
   }
 
   /* --- godina u podnožju --- */
-  document.getElementById('god').textContent = new Date().getFullYear();
+  const god = document.getElementById('god');
+  if (god) god.textContent = new Date().getFullYear();
 })();
